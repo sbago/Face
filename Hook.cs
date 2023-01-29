@@ -52,11 +52,13 @@ namespace Face
             this.State = true;
             this.Rotion= r;
             _updatePos2.Enable();
+            DalamudApi.ChatGui.PrintChat(new() { Message = new Dalamud.Game.Text.SeStringHandling.SeString(new Dalamud.Game.Text.SeStringHandling.Payloads.TextPayload($"已设置面向:{r:f3}")) });
         }
         public void Disable()
         {
             this.State = false;
             _updatePos2.Disable();
+            DalamudApi.ChatGui.Print("已关闭");
         }
         public void Dispose()
         {

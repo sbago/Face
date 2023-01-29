@@ -19,7 +19,7 @@ namespace Face
                 hook = new Hook();
                 DalamudApi.GameNetwork.NetworkMessage += GameNetwork_NetworkMessage;
                 DalamudApi.Framework.Update += Framework_Update;
-                DalamudApi.CommandManager.AddHandler("/Face", new Dalamud.Game.Command.CommandInfo(FaceCommand) { HelpMessage = "Set Face" });
+                DalamudApi.CommandManager.AddHandler("/Face", new Dalamud.Game.Command.CommandInfo(FaceCommand) { HelpMessage = "设置面向 -3.14到3.14之间 s关闭 \n 例如/Face 1.5，/Face s" });
             }catch(Exception ex)
             {
                 PluginLog.Error(ex.ToString());
